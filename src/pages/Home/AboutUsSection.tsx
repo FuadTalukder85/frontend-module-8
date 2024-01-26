@@ -1,4 +1,4 @@
-import Container from "@/components/ui/layouts/Container";
+import Container from "@/components/layouts/Container";
 
 const AboutUsSection = () => {
   return (

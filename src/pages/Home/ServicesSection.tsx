@@ -1,7 +1,7 @@
 import BatteryReplacement from "@/components/ui/ServiceTiles/BatteryReplacement";
 import ChipSetReplacement from "@/components/ui/ServiceTiles/ChipSetReplacement";
 import DataRecovery from "@/components/ui/ServiceTiles/DataRecovery";
-import Container from "@/components/ui/layouts/Container";
+import Container from "@/components/layouts/Container";
 
 const ServicesSection = () => {
   return (

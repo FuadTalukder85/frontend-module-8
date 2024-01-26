@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import Container from "@/components/ui/layouts/Container";
+import Container from "@/components/layouts/Container";
 import mackbook from "../../../src/assets/macbook-exposed 1.png";
 import { easeInOut, motion } from "framer-motion";
 
