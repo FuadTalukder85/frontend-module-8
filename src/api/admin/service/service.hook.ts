@@ -14,6 +14,7 @@ export const useGetServices = () => {
       }));
       return services;
     },
+    // gcTime: 5000,
   });
   return serviceData;
 };

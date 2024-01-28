@@ -1,7 +1,7 @@
 import { useGetServices } from "@/api/admin/service/service.hook";
 import Container from "@/components/layouts/Container";
 import { Button } from "@/components/ui/button";
-import { useMutation } from "@tanstack/react-query";
+import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { useState, FormEvent } from "react";
 import {
   Table,
@@ -18,6 +18,7 @@ import { Trash2 } from "lucide-react";
 const ServiceList = () => {
   const { data: services, isLoading, isError } = useGetServices();
   const [serviceName, setServiceName] = useState("");
+  const queryClient = useQueryClient();
 
   const {
     mutateAsync,
@@ -32,6 +33,9 @@ const ServiceList = () => {
           "Content-Type": "application/json",
         },
       });
+    },
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ["services"] });
     },
   });
   console.log({ postError, isSuccess });
